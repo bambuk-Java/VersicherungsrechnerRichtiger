@@ -11,3 +11,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.model_buttons {
+  display: inline-block;
+  padding: 0.5em 1em; /* Padding sorgt für zusätzlichen Raum innerhalb der Buttons */
+  font-size: 1em; /* Sie können die Schriftgröße nach Bedarf anpassen */
+  width: auto; /* Die Breite passt sich automatisch dem Inhalt an */
+  height: auto; /* Die Höhe passt sich automatisch dem Inhalt an */
+  margin: 0.5em; /* Margin sorgt für etwas Abstand zwischen den Buttons */
+  background-color: #bcbfc0; /* Beispiel für eine Hintergrundfarbe */
+  color: white; /* Textfarbe */
+  border: none; /* Entfernt den Standardrahmen */
+  border-radius: 0.25em; /* Runde Ecken */
+  cursor: pointer; /* Zeiger zeigt an, dass der Button klickbar ist */
+}
+
+.model_buttons:hover {
+  background-color: #a9adaa; /* Dunklere Hintergrundfarbe beim Hover */
+}
