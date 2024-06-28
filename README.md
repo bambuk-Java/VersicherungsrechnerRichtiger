@@ -1,70 +1,127 @@
-# Getting Started with Create React App
+# VersicherungsrechnerRichtiger
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+VersicherungsrechnerRichtiger is a React-based application designed to calculate insurance policies efficiently. This project uses modern web technologies to provide a seamless user experience.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **User-friendly Interface**: Easy navigation and intuitive design.
+- **Real-time Calculations**: Instant updates and results as inputs change.
+- **Responsive Design**: Optimized for both desktop and mobile devices.
 
-### `npm start`
+## Folder Structure
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```plaintext
+VersicherungsrechnerRichtiger/
+├── node_modules/
+├── public/
+│   ├── index.html
+│   └── ...
+├── src/
+│   ├── components/
+│   │   ├── Calculator.js
+│   │   └── ...
+│   ├── App.css
+│   ├── App.js
+│   ├── index.css
+│   ├── index.js
+│   └── ...
+├── .gitignore
+├── package.json
+├── README.md
+└── ...
+````
+## Installation
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+To get a local copy up and running, follow these steps:
 
-### `npm test`
+````bash
+git clone https://github.com/bambuk-Java/VersicherungsrechnerRichtiger.git
+````
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Navigate to the project directory:
 
-### `npm run build`
+````bash
+cd VersicherungsrechnerRichtiger
+`````
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Install dependencies:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+````bash 
+npm install
+````
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Usage
 
-### `npm run eject`
+To start the development server, run:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+````bash
+npm start
+````
+Open http://localhost:3000 to view it in your browser.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To run tests, use:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+````bash
+npm test
+````
 
-## Learn More
+To build the app for production, execute:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+````bash
+npm run build
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+````
 
-### Code Splitting
+## Code Snippets
+Here are some examples of how the code works within this project:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Calculator Component (src/components/Calculator.js):
 
-### Analyzing the Bundle Size
+`````bash
+import React, { useState } from 'react';
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+const Calculator = () => {
+    const [value, setValue] = useState('');
 
-### Making a Progressive Web App
+    const handleChange = (e) => {
+        setValue(e.target.value);
+    };
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+    return (
+        <div>
+            <input type="text" value={value} onChange={handleChange} />
+            <p>Calculated Value: {value}</p>
+        </div>
+    );
+};
 
-### Advanced Configuration
+export default Calculator;
+`````
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Main Application (src/App.js):
 
-### Deployment
+````bash
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+import React from 'react';
+import Calculator from './components/Calculator';
+import './App.css';
 
-### `npm run build` fails to minify
+function App() {
+    return (
+        <div className="App">
+            <header className="App-header">
+                <h1>VersicherungsrechnerRichtiger</h1>
+                <Calculator />
+            </header>
+        </div>
+    );
+}
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+export default App;
+
+````
+
+## Contact
+
+Laurin Hubschmid - laurin.hubschmid@lernende.bbw.ch
